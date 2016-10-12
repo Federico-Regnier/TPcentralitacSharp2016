@@ -35,6 +35,12 @@ namespace CentralitaHerencia
             }
         }
 
+        /// <summary>
+        /// Constructor que inicializa todos los atributos de la clase
+        /// </summary>
+        /// <param name="origen">Origen de la llamada</param>
+        /// <param name="destino">Destino de la llamada</param>
+        /// <param name="duracion">Duracion de la llamada</param>
         public Llamada(string origen, string destino, float duracion)
         {
             this._duracion = duracion;
@@ -42,7 +48,10 @@ namespace CentralitaHerencia
             this._nroOrigen = origen;
         }
 
-        public void Mostrar()
+        /// <summary>
+        /// Imprime por consola los atributos de la clase
+        /// </summary>
+        public virtual void Mostrar()
         {
             StringBuilder sb = new StringBuilder();
 
@@ -53,6 +62,12 @@ namespace CentralitaHerencia
             Console.Write(sb.ToString());
         }
 
+        /// <summary>
+        /// Compara la duracion de la primer llamada con la segunda.
+        /// </summary>
+        /// <param name="uno">Primer llamada a comparar</param>
+        /// <param name="dos">Segunda llamada a comparar</param>
+        /// <returns>INT positivo si la primera es mayor, cero si son iguales, negativo si la segunda es mayor</returns>
         public static int OrdenarPorDuracion(Llamada uno, Llamada dos)
         {
             return uno.Duracion.CompareTo(dos.Duracion);

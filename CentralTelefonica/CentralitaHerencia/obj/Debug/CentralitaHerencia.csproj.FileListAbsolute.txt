@@ -4,3 +4,9 @@ C:\Users\Bartok\Documents\workspace_utn\Prog 2\CentralTelefonica\CentralitaHeren
 C:\Users\Bartok\Documents\workspace_utn\Prog 2\CentralTelefonica\CentralitaHerencia\obj\Debug\CentralitaHerencia.csprojResolveAssemblyReference.cache
 C:\Users\Bartok\Documents\workspace_utn\Prog 2\CentralTelefonica\CentralitaHerencia\obj\Debug\CentralitaHerencia.exe
 C:\Users\Bartok\Documents\workspace_utn\Prog 2\CentralTelefonica\CentralitaHerencia\obj\Debug\CentralitaHerencia.pdb
+C:\Users\Bartok\Documents\workspace_utn\Prog 2\TPcentralitacSharp2016\CentralTelefonica\CentralitaHerencia\bin\Debug\CentralitaHerencia.exe.config
+C:\Users\Bartok\Documents\workspace_utn\Prog 2\TPcentralitacSharp2016\CentralTelefonica\CentralitaHerencia\obj\Debug\CentralitaHerencia.exe
+C:\Users\Bartok\Documents\workspace_utn\Prog 2\TPcentralitacSharp2016\CentralTelefonica\CentralitaHerencia\obj\Debug\CentralitaHerencia.pdb
+C:\Users\Bartok\Documents\workspace_utn\Prog 2\TPcentralitacSharp2016\CentralTelefonica\CentralitaHerencia\bin\Debug\CentralitaHerencia.exe
+C:\Users\Bartok\Documents\workspace_utn\Prog 2\TPcentralitacSharp2016\CentralTelefonica\CentralitaHerencia\bin\Debug\CentralitaHerencia.pdb
+C:\Users\Bartok\Documents\workspace_utn\Prog 2\TPcentralitacSharp2016\CentralTelefonica\CentralitaHerencia\obj\Debug\CentralitaHerencia.csprojResolveAssemblyReference.cache

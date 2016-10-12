@@ -12,6 +12,9 @@ namespace CentralitaHerencia
         protected string _razonSocial;
 
         #region Propiedades
+        /// <summary>
+        /// Lista que contiene las llamadas
+        /// </summary>
         public List<Llamada> Llamadas
         {
             get
@@ -20,6 +23,9 @@ namespace CentralitaHerencia
             }
         }
 
+        /// <summary>
+        /// Ganancia por tipo de llamada locales
+        /// </summary>
         public float GananciaPorLocal
         {
             get
@@ -28,6 +34,9 @@ namespace CentralitaHerencia
             }
         }
 
+        /// <summary>
+        /// Ganancia generada por llamadas provinciales
+        /// </summary>
         public float GananciaPorProvincial
         {
             get
@@ -36,6 +45,9 @@ namespace CentralitaHerencia
             }
         }
 
+        /// <summary>
+        /// Ganancia Total de la centralita
+        /// </summary>
         public float GananciaTotal
         {
             get
@@ -46,11 +58,18 @@ namespace CentralitaHerencia
         #endregion
 
         #region Constructores
+        /// <summary>
+        /// Constructor por defecto que inicializa la lista
+        /// </summary>
         public Centralita()
         {
             this._listaDeLlamadas = new List<Llamada>();
         }
 
+        /// <summary>
+        /// Constructor que recibe por parametro la razon social
+        /// </summary>
+        /// <param name="nombreEmpresa">Razon social de la empresa</param>
         public Centralita(string nombreEmpresa)
             : this()
         {
@@ -58,6 +77,11 @@ namespace CentralitaHerencia
         }
         #endregion
 
+        /// <summary>
+        /// Calcula la ganancia segun el tipo de llamada
+        /// </summary>
+        /// <param name="tipo">Tipo de llamada a calcular la ganancia generada</param>
+        /// <returns>Ganancia segun el tipo de llamada</returns>
         private float CalcularGanancia(TipoLlamada tipo)
         {
             float ganancia = 0;
@@ -100,17 +124,21 @@ namespace CentralitaHerencia
             return ganancia;
         }
 
+        /// <summary>
+        /// Ordena la lista de llamadas segun la duracion (menor a mayor)
+        /// </summary>
         public void OrdenarLLamadas()
         {
             this._listaDeLlamadas.Sort(Llamada.OrdenarPorDuracion);
         }
 
+        /// <summary>
+        /// Muestra por consola los datos de la centralita y el detalle de llamadas
+        /// </summary>
         public void Mostrar()
         {
             StringBuilder sb = new StringBuilder();
-            Local llamadaLocal;
-            Provincial llamadaProvincial;
-
+            
             sb.AppendLine();
             sb.AppendLine("\t" + this._razonSocial);
             sb.AppendLine("Ganancia por Llamadas Locales: " + this.GananciaPorLocal);
@@ -121,16 +149,7 @@ namespace CentralitaHerencia
             Console.WriteLine(sb);
             foreach (Llamada item in this.Llamadas)
             {
-                if (item is Local)
-                {
-                    llamadaLocal = (Local)item;
-                    llamadaLocal.Mostrar();
-                }
-                if (item is Provincial)
-                {
-                    llamadaProvincial = (Provincial)item;
-                    llamadaProvincial.Mostrar();
-                }
+                item.Mostrar();
             }
         }
     }
