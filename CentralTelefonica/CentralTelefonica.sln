@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Express 2012 for Windows Desktop
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CentralitaHerencia", "CentralitaHerencia\CentralitaHerencia.csproj", "{8E6B070A-9820-4B31-B3E2-218349FA26B3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CentralitaPolimorfismo", "CentralitaPolimorfismo\CentralitaPolimorfismo.csproj", "{CCD05167-FBF4-439E-9662-C024C122834C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{8E6B070A-9820-4B31-B3E2-218349FA26B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E6B070A-9820-4B31-B3E2-218349FA26B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8E6B070A-9820-4B31-B3E2-218349FA26B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCD05167-FBF4-439E-9662-C024C122834C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCD05167-FBF4-439E-9662-C024C122834C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCD05167-FBF4-439E-9662-C024C122834C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCD05167-FBF4-439E-9662-C024C122834C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
