@@ -3,3 +3,8 @@ C:\Users\Bartok\Documents\workspace_utn\Prog 2\TPcentralitacSharp2016\CentralTel
 C:\Users\Bartok\Documents\workspace_utn\Prog 2\TPcentralitacSharp2016\CentralTelefonica\CentralitaPolimorfismo\bin\Debug\CentralitaPolimorfismo.pdb
 C:\Users\Bartok\Documents\workspace_utn\Prog 2\TPcentralitacSharp2016\CentralTelefonica\CentralitaPolimorfismo\obj\Debug\CentralitaPolimorfismo.exe
 C:\Users\Bartok\Documents\workspace_utn\Prog 2\TPcentralitacSharp2016\CentralTelefonica\CentralitaPolimorfismo\obj\Debug\CentralitaPolimorfismo.pdb
+D:\FR\TPcentralita\CentralTelefonica\CentralitaPolimorfismo\bin\Debug\CentralitaPolimorfismo.exe.config
+D:\FR\TPcentralita\CentralTelefonica\CentralitaPolimorfismo\obj\Debug\CentralitaPolimorfismo.exe
+D:\FR\TPcentralita\CentralTelefonica\CentralitaPolimorfismo\obj\Debug\CentralitaPolimorfismo.pdb
+D:\FR\TPcentralita\CentralTelefonica\CentralitaPolimorfismo\bin\Debug\CentralitaPolimorfismo.exe
+D:\FR\TPcentralita\CentralTelefonica\CentralitaPolimorfismo\bin\Debug\CentralitaPolimorfismo.pdb
