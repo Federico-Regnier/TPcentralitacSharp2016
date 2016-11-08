@@ -3,14 +3,30 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
+using System.Xml.Serialization;
+using System.IO;
 
 namespace CentralitaSerializacion
 {
     [Serializable]
-    public class Centralita
+    [XmlInclude(typeof(Local))]
+    [XmlInclude(typeof(Provincial))]
+    public class Centralita : ISerializable
     {
         private List<Llamada> _listaDeLlamadas;
         protected string _razonSocial;
+        public string RazonSocial
+        {
+            get
+            {
+                return this._razonSocial;
+            }
+            set
+            {
+                this._razonSocial = value;
+            }
+        }
         private string _ruta;
         public string RutaDeArchivo
         {
@@ -134,6 +150,14 @@ namespace CentralitaSerializacion
         private void AgregarLlamada(Llamada nuevaLlamada)
         {
             this._listaDeLlamadas.Add(nuevaLlamada);
+            try
+            {
+                this.GuardadEnArchivo(nuevaLlamada, true);
+            }
+            catch (CentralitaException e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
 
         /// <summary>
@@ -194,6 +218,70 @@ namespace CentralitaSerializacion
         }
 
 
+        public bool DeSerializarse()
+        {
+            bool bandera = false;
 
+            try
+            {
+                using (XmlTextReader lector = new XmlTextReader(this._ruta + @"\Centralita.xml"))
+                {
+                    XmlSerializer serializador = new XmlSerializer(typeof(Centralita));
+                    Centralita aux = (Centralita)serializador.Deserialize(lector);
+                    this._listaDeLlamadas = aux._listaDeLlamadas;
+                    this._razonSocial = aux._razonSocial;
+                    this._ruta = aux._ruta;
+                    bandera = true;
+                }
+            }
+            catch (Exception e)
+            {
+                throw new CentralitaException("Error al deserializar el archivo", "Centralita", "DeSerializarse", e);
+            }
+
+            return bandera;
+        }
+
+        public bool Serializarse()
+        {
+            bool flag = false;
+
+            try
+            {
+                using (XmlTextWriter escritor = new XmlTextWriter(this._ruta + @"\Centralita.xml", Encoding.UTF8))
+                {
+                    XmlSerializer serializador = new XmlSerializer(typeof(Centralita));
+                    serializador.Serialize(escritor, this);
+                    flag = true;
+                }
+            }
+            catch (Exception e)
+            {
+                throw new CentralitaException("Error al serializar la centralita", "Centralita", "Serializarse", e);
+            }
+
+            return flag;
+        }
+
+        private bool GuardadEnArchivo(Llamada unaLlamada, bool agrego)
+        {
+            bool bandera = false;
+            try
+            {
+                using (StreamWriter escritor = new StreamWriter(this._ruta + @"\Llamada.txt", agrego))
+                {
+                    escritor.WriteLine("Llamada ");
+                    escritor.WriteLine("Fecha: " + DateTime.Now.ToLongDateString());
+                    escritor.WriteLine(this.ToString());
+                    escritor.Flush();
+                    bandera = true;
+                }
+            }
+            catch (Exception e)
+            {
+                throw new CentralitaException("No se pudo guardar la llamada", "Centralita", "GuardarEnArchivo", e);
+            }
+            return bandera;
+        }
     }
 }

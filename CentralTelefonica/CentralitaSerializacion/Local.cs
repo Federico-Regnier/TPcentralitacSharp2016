@@ -10,6 +10,18 @@ namespace CentralitaSerializacion
     public class Local : Llamada
     {
         protected float _costo;
+        public float Costo
+        {
+            get
+            {
+                return this._costo;
+            }
+            set
+            {
+                this._costo = value;
+            }
+        }
+
         public override float CostoLlamada
         {
             get 
@@ -19,6 +31,8 @@ namespace CentralitaSerializacion
         }
 
         #region Constructores
+
+        public Local() { }
 
         /// <summary>
         /// Constructor de clase, inicializa los atributos de la clase y los de la base.

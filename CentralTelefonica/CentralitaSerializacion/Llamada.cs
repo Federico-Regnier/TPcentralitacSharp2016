@@ -15,6 +15,10 @@ namespace CentralitaSerializacion
             {
                 return this._duracion;
             }
+            set
+            {
+                this._duracion = value;
+            }
         }
 
         protected string _nroDestino;
@@ -23,6 +27,10 @@ namespace CentralitaSerializacion
             get
             {
                 return this._nroDestino;
+            }
+            set
+            {
+                this._nroDestino = value;
             }
         }
 
@@ -33,11 +41,18 @@ namespace CentralitaSerializacion
             {
                 return this._nroOrigen;
             }
+            set
+            {
+                this._nroOrigen = value;
+            }
         }
 
         public abstract float CostoLlamada { get; }
 
-        #region Constructor
+        #region Constructores
+
+        public Llamada() { }
+        
         /// <summary>
         /// Constructor que inicializa todos los atributos de la clase
         /// </summary>

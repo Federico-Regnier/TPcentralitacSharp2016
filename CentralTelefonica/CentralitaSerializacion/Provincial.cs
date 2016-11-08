@@ -10,6 +10,17 @@ namespace CentralitaSerializacion
     public class Provincial : Llamada
     {
         protected Franja _franjaHoraria;
+        public Franja FranjaHoraria
+        {
+            get
+            {
+                return this._franjaHoraria;
+            }
+            set
+            {
+                this._franjaHoraria = value;
+            }
+        }
 
         public override float CostoLlamada
         {
@@ -18,6 +29,8 @@ namespace CentralitaSerializacion
                 return this.CalcularCosto();
             }
         }
+
+        public Provincial() { }
 
         /// <summary>
         /// Constructor que inicializa todos los atributos de la clase
